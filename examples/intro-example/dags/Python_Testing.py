@@ -36,6 +36,9 @@ def first_func():
     print('job starting .........')
 
 def Second_func():
+
+    import pandas as pd
+
     A = pd.DataFrame(range(0,100), column = ['Value'])
     A.to_csv('Output_form_Second_func.txt')
     print('Job is done')
@@ -69,7 +72,7 @@ default_args = {
 dag = DAG(
     'Python_Testing',
     default_args=default_args,
-    description='A simple test for adding new eck',
+    description='A simple test for adding new deck',
     schedule_interval=timedelta(days=1),
 )
 
@@ -78,6 +81,7 @@ t1 = PythonOperator(
     task_id='print_start',
     python_callable=first_func,
     dag=dag,
+    trigger_rule='all_success'
 )
 
 t1.doc_md = """\
@@ -94,6 +98,7 @@ t2 = PythonOperator(
     task_id='Output_Pandas',
     python_callable=Second_func,
     dag=dag,
+    trigger_rule='all_success'
 )
 
 templated_command = """
