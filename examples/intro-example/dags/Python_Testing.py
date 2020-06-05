@@ -38,8 +38,7 @@ def first_func():
 def Second_func():
 
     import pandas as pd
-
-    A = pd.DataFrame(range(0,100), column = ['Value'])
+    A = pd.DataFrame(range(0,100), columns = ['Value'])
     A.to_csv('Output_form_Second_func.txt')
     print('Job is done')
 
