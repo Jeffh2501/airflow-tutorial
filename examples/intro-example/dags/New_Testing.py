@@ -55,9 +55,9 @@ default_args = {
 }
 
 dag = DAG(
-    'tutorial',
+    'New_Testing',
     default_args=default_args,
-    description='A simple tutorial DAG',
+    description='A simple test for adding new eck',
     schedule_interval=timedelta(days=1),
 )
 
