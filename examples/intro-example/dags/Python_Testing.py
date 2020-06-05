@@ -40,8 +40,8 @@ def Second_func():
     import pandas as pd
     import os
     A = pd.DataFrame(range(0,100), columns = ['Value'])
-    print('Output directory is:', os.getcwd())
-    A.to_csv('Output_form_Second_func.txt')
+    path = '/Users/jeffheung/airflow-tutorial/examples/intro-example/dags/'
+    A.to_csv(path + 'Output_form_Second_func.txt')
     print('Job is done')
 
 # These args will get passed on to each operator
