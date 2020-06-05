@@ -38,7 +38,9 @@ def first_func():
 def Second_func():
 
     import pandas as pd
+    import os
     A = pd.DataFrame(range(0,100), columns = ['Value'])
+    print('Output directory is:', os.getcwd())
     A.to_csv('Output_form_Second_func.txt')
     print('Job is done')
 
