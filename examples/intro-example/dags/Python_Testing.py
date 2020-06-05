@@ -28,7 +28,7 @@ import pandas as pd
 import airflow
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
-from airflow.operators.bash_operator import PythonOperator
+from airflow.operators.python_operator import PythonOperator
 
 
 # Define Python script
