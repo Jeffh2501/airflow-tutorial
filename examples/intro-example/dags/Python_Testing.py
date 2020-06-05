@@ -35,7 +35,7 @@ from airflow.operators.bash_operator import PythonOperator
 def first_func():
     print('job starting .........')
 
-def Second_func()
+def Second_func():
     A = pd.DataFrame(range(0,100), column = ['Value'])
     A.to_csv('Output_form_Second_func.txt')
     print('Job is done')
