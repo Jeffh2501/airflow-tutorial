@@ -100,7 +100,7 @@ t2 = PythonOperator(
     python_callable=Second_func,
     dag=dag,
     trigger_rule='all_success',
-    'depends_on_past': False
+    depends_on_past=False
 )
 
 templated_command = """
