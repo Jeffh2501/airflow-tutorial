@@ -99,7 +99,8 @@ t2 = PythonOperator(
     task_id='Output_Pandas',
     python_callable=Second_func,
     dag=dag,
-    trigger_rule='all_success'
+    trigger_rule='all_success',
+    'depends_on_past': False
 )
 
 templated_command = """
